@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SCL xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.iec.ch/61850/2003/SCL">
+  <Header id="" version="3" revision="0" nameStructure="IEDName" />
+  <Communication>
+    <SubNetwork name="SubNetworkName">
+      <ConnectedAP iedName="RECTIFIER" apName="P1">
+        <Address>
+          <P type="OSI-AP-Title">1,1,9999,1</P>
+          <P type="OSI-AE-Qualifier">12</P>
+          <P type="OSI-PSEL">00000001</P>
+          <P type="OSI-SSEL">0001</P>
+          <P type="OSI-TSEL">0001</P>
+          <P type="IP">10.0.50.100</P>
+          <P type="IP-SUBNET">255.255.255.0</P>
+          <P type="IP-GATEWAY">10.0.50.1</P>
+        </Address>
+        <GSE ldInst="LDRCT1" cbName="GSE_CB_GOOSE">
+          <Address>
+            <P type="MAC-Address">01-0C-CD-01-00-00</P>
+            <P type="VLAN-PRIORITY">4</P>
+            <P type="VLAN-ID">0</P>
+            <P type="APPID">0</P>
+          </Address>
+        </GSE>
+      </ConnectedAP>
+    </SubNetwork>
+  </Communication>
+  <IED name="RECTIFIER" type="RTUType" manufacturer="SBP-INVERTOR" configVersion="1.0">
+    <Services />
+    <AccessPoint name="P1" router="false" clock="false">
+      <Server timeout="30">
+        <Authentication none="true" password="false" weak="false" strong="false" certificate="false" />
+        <LDevice desc="" inst="LDRCT1">
+          <LN0 lnType="LLN0_0" lnClass="LLN0" inst="">
+            <DOI name="Beh">
+              <DAI name="stVal" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="2041" Field3="5" Field4="1" Field5="2" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="2041" Field3="0" Field4="2" Field5="2" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="2041" Field3="0" Field4="3" Field5="2" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+            </DOI>
+            <DOI name="Health">
+              <DAI name="stVal" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="2042" Field3="6" Field4="4" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="2042" Field3="0" Field4="5" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="2042" Field3="0" Field4="6" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+            </DOI>
+            <DOI name="NamPlt">
+              <DAI name="vendor" valKind="Set">
+                <Val>SBP-INVERTOR</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Mod">
+              <DAI name="ctlModel" valKind="Set">
+                <Val>status-only</Val>
+              </DAI>
+              <DAI name="stVal" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="110" Field3="10" Field4="7" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="110" Field3="0" Field4="8" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="110" Field3="0" Field4="9" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+            </DOI>
+          </LN0>
+          <LN lnType="ZRCT_TYPE_3" lnClass="ZRCT" inst="1" prefix="RCF_">
+            <DOI name="InV">
+              <SDI name="phsAB">
+                <SDI name="cVal">
+                  <SDI name="mag">
+                    <DAI name="f" valKind="Set">
+                      <Private type="SystemCorp_Generic">
+                        <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1036" Field3="0" Field4="10" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                      </Private>
+                    </DAI>
+                  </SDI>
+                </SDI>
+                <SDI name="units">
+                  <DAI name="SIUnit" valKind="Set">
+                    <Val>V</Val>
+                  </DAI>
+                  <DAI name="multiplier" valKind="Set">
+                    <Val>No Multiplier</Val>
+                  </DAI>
+                </SDI>
+                <DAI name="q" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1036" Field3="0" Field4="11" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="t" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1036" Field3="0" Field4="12" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="dU" valKind="Set">
+                  <Val>Напряжение фазы U входной сети</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsBC">
+                <SDI name="cVal">
+                  <SDI name="mag">
+                    <DAI name="f" valKind="Set">
+                      <Private type="SystemCorp_Generic">
+                        <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1038" Field3="0" Field4="13" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                      </Private>
+                    </DAI>
+                  </SDI>
+                </SDI>
+                <SDI name="units">
+                  <DAI name="SIUnit" valKind="Set">
+                    <Val>V</Val>
+                  </DAI>
+                  <DAI name="multiplier" valKind="Set">
+                    <Val>No Multiplier</Val>
+                  </DAI>
+                </SDI>
+                <DAI name="q" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1038" Field3="0" Field4="14" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="t" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1038" Field3="0" Field4="15" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="dU" valKind="Set">
+                  <Val>Напряжение фазы V входной сети</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsCA">
+                <SDI name="cVal">
+                  <SDI name="mag">
+                    <DAI name="f" valKind="Set">
+                      <Private type="SystemCorp_Generic">
+                        <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1040" Field3="0" Field4="16" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                      </Private>
+                    </DAI>
+                  </SDI>
+                </SDI>
+                <SDI name="units">
+                  <DAI name="SIUnit" valKind="Set">
+                    <Val>V</Val>
+                  </DAI>
+                  <DAI name="multiplier" valKind="Set">
+                    <Val>No Multiplier</Val>
+                  </DAI>
+                </SDI>
+                <DAI name="q" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1040" Field3="0" Field4="17" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="t" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1040" Field3="0" Field4="18" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="dU" valKind="Set">
+                  <Val>Напряжение фазы W входной сети</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="InA">
+              <SDI name="phsA">
+                <SDI name="cVal">
+                  <SDI name="mag">
+                    <DAI name="f" valKind="Set">
+                      <Private type="SystemCorp_Generic">
+                        <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1050" Field3="0" Field4="19" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                      </Private>
+                    </DAI>
+                  </SDI>
+                </SDI>
+                <SDI name="units">
+                  <DAI name="SIUnit" valKind="Set">
+                    <Val>A</Val>
+                  </DAI>
+                  <DAI name="multiplier" valKind="Set">
+                    <Val>No Multiplier</Val>
+                  </DAI>
+                </SDI>
+                <DAI name="q" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1050" Field3="0" Field4="20" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="t" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1050" Field3="0" Field4="21" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="dU" valKind="Set">
+                  <Val>Ток фазы U входной сети</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsB">
+                <SDI name="cVal">
+                  <SDI name="mag">
+                    <DAI name="f" valKind="Set">
+                      <Private type="SystemCorp_Generic">
+                        <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1052" Field3="0" Field4="22" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                      </Private>
+                    </DAI>
+                  </SDI>
+                </SDI>
+                <SDI name="units">
+                  <DAI name="SIUnit" valKind="Set">
+                    <Val>A</Val>
+                  </DAI>
+                  <DAI name="multiplier" valKind="Set">
+                    <Val>No Multiplier</Val>
+                  </DAI>
+                </SDI>
+                <DAI name="q" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1052" Field3="0" Field4="23" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="t" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1052" Field3="0" Field4="24" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="dU" valKind="Set">
+                  <Val>Ток фазы V входной сети</Val>
+                </DAI>
+              </SDI>
+              <SDI name="phsC">
+                <SDI name="cVal">
+                  <SDI name="mag">
+                    <DAI name="f" valKind="Set">
+                      <Private type="SystemCorp_Generic">
+                        <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1054" Field3="2" Field4="25" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                      </Private>
+                    </DAI>
+                  </SDI>
+                </SDI>
+                <SDI name="units">
+                  <DAI name="SIUnit" valKind="Set">
+                    <Val>A</Val>
+                  </DAI>
+                  <DAI name="multiplier" valKind="Set">
+                    <Val>No Multiplier</Val>
+                  </DAI>
+                </SDI>
+                <DAI name="q" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1054" Field3="0" Field4="26" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="t" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1054" Field3="0" Field4="27" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+                <DAI name="dU" valKind="Set">
+                  <Val>Ток фазы W входной сети</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="OutV">
+              <SDI name="units">
+                <DAI name="SIUnit" valKind="Set">
+                  <Val>V</Val>
+                </DAI>
+                <DAI name="multiplier" valKind="Set">
+                  <Val>No Multiplier</Val>
+                </DAI>
+              </SDI>
+              <SDI name="mag">
+                <DAI name="f" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1042" Field3="0" Field4="28" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+              </SDI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1042" Field3="0" Field4="29" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1042" Field3="0" Field4="30" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="dU" valKind="Set">
+                <Val>Выходное напряжение выпрямителя</Val>
+              </DAI>
+            </DOI>
+            <DOI name="OutA">
+              <SDI name="mag">
+                <DAI name="f" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1270" Field3="0" Field4="31" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" valKind="Set">
+                  <Val>A</Val>
+                </DAI>
+                <DAI name="multiplier" valKind="Set">
+                  <Val>No Multiplier</Val>
+                </DAI>
+              </SDI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1270" Field3="0" Field4="32" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1270" Field3="0" Field4="33" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="dU" valKind="Set">
+                <Val>Выходной ток выпрямителя</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Fm">
+              <SDI name="mag">
+                <DAI name="f" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1300" Field3="0" Field4="34" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" valKind="Set">
+                  <Val>Hz</Val>
+                </DAI>
+                <DAI name="multiplier" valKind="Set">
+                  <Val>No Multiplier</Val>
+                </DAI>
+              </SDI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1300" Field3="0" Field4="35" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1300" Field3="0" Field4="36" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="dU" valKind="Set">
+                <Val>Частота входной сети</Val>
+              </DAI>
+            </DOI>
+            <DOI name="BatA">
+              <SDI name="mag">
+                <DAI name="f" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1268" Field3="0" Field4="37" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" valKind="Set">
+                  <Val>A</Val>
+                </DAI>
+                <DAI name="multiplier" valKind="Set">
+                  <Val>No Multiplier</Val>
+                </DAI>
+              </SDI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1268" Field3="0" Field4="38" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1268" Field3="0" Field4="39" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="dU" valKind="Set">
+                <Val>Ток АБ</Val>
+              </DAI>
+            </DOI>
+            <DOI name="OutP">
+              <SDI name="mag">
+                <DAI name="f" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1272" Field3="0" Field4="40" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" valKind="Set">
+                  <Val>W</Val>
+                </DAI>
+                <DAI name="multiplier" valKind="Set">
+                  <Val>k</Val>
+                </DAI>
+              </SDI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1272" Field3="0" Field4="41" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1272" Field3="0" Field4="42" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="dU" valKind="Set">
+                <Val>Выходная мощность выпрямителя</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Kpls">
+              <SDI name="mag">
+                <DAI name="f" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1302" Field3="0" Field4="43" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" valKind="Set">
+                  <Val>%</Val>
+                </DAI>
+                <DAI name="multiplier" valKind="Set">
+                  <Val>No Multiplier</Val>
+                </DAI>
+              </SDI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1302" Field3="0" Field4="44" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1302" Field3="0" Field4="45" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="dU" valKind="Set">
+                <Val>Коэффициент пульсации</Val>
+              </DAI>
+            </DOI>
+            <DOI name="BatTmp">
+              <SDI name="mag">
+                <DAI name="i" valKind="Set">
+                  <Private type="SystemCorp_Generic">
+                    <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="4058" Field3="0" Field4="46" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                  </Private>
+                </DAI>
+              </SDI>
+              <SDI name="units">
+                <DAI name="SIUnit" valKind="Set">
+                  <Val>°C</Val>
+                </DAI>
+                <DAI name="multiplier" valKind="Set">
+                  <Val>No Multiplier</Val>
+                </DAI>
+              </SDI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="4058" Field3="0" Field4="47" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="4058" Field3="0" Field4="48" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="dU" valKind="Set">
+                <Val>Температура АБ</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Beh">
+              <DAI name="stVal" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="2041" Field3="5" Field4="49" Field5="2" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="2041" Field3="0" Field4="50" Field5="2" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="2041" Field3="0" Field4="51" Field5="2" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+            </DOI>
+            <DOI name="Health">
+              <DAI name="stVal" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1205" Field3="6" Field4="52" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1205" Field3="0" Field4="53" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1205" Field3="0" Field4="54" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+            </DOI>
+            <DOI name="NamPlt">
+              <DAI name="vendor" valKind="Set">
+                <Val>SBP-INVERTOR</Val>
+              </DAI>
+            </DOI>
+            <DOI name="Mod">
+              <DAI name="stVal" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1206" Field3="5" Field4="55" Field5="1" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1206" Field3="0" Field4="56" Field5="1" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="8" Field2="1206" Field3="0" Field4="57" Field5="1" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="ctlModel" valKind="Set">
+                <Val>status-only</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnType="LPHD_TYPE" lnClass="LPHD" inst="1" prefix="">
+            <DOI name="PhyHealth">
+              <DAI name="stVal" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="3" Field2="1205" Field3="6" Field4="1" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="q" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="3" Field2="1205" Field3="0" Field4="2" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+              <DAI name="t" valKind="Set">
+                <Private type="SystemCorp_Generic">
+                  <SystemCorp_Generic:GenericPrivateObject Field1="3" Field2="1205" Field3="0" Field4="3" Field5="0" xmlns:SystemCorp_Generic="http://www.systemcorp.com.au/61850/SCL/Generic" />
+                </Private>
+              </DAI>
+            </DOI>
+            <DOI name="PhyNam">
+              <DAI name="vendor" valKind="Set">
+                <Val>SBP-INVERTOR</Val>
+              </DAI>
+            </DOI>
+          </LN>
+          <LN lnType="XCBR291" lnClass="XCBR" inst="291" prefix="">
+            <DOI name="Pos">
+              <SDI name="ctlModel">
+                <DAI name="ctlModels" valKind="Spec">
+                  <Val>status_only</Val>
+                </DAI>
+              </SDI>
+              <DAI name="ctlVal" valKind="Spec" />
+              <DAI name="q" valKind="Spec" />
+              <DAI name="stVal" valKind="Spec">
+                <Val>on</Val>
+              </DAI>
+              <DAI name="t" valKind="Spec" />
+            </DOI>
+            <DOI name="OpCnt">
+              <DAI name="q" valKind="Spec" />
+              <DAI name="stVal" valKind="Spec">
+                <Val>on</Val>
+              </DAI>
+              <DAI name="t" valKind="Spec" />
+            </DOI>
+            <DOI name="CBOpCap">
+              <DAI name="q" valKind="Spec" />
+              <DAI name="stVal" valKind="Spec">
+                <Val>on</Val>
+              </DAI>
+              <DAI name="t" valKind="Spec" />
+            </DOI>
+            <DOI name="BlkOpn">
+              <SDI name="ctlModel">
+                <DAI name="ctlModels" valKind="Spec">
+                  <Val>status_only</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="BlkCls">
+              <SDI name="ctlModel">
+                <DAI name="ctlModels" valKind="Spec">
+                  <Val>status_only</Val>
+                </DAI>
+              </SDI>
+            </DOI>
+            <DOI name="Loc">
+              <DAI name="q" valKind="Spec" />
+              <DAI name="stVal" valKind="Spec" />
+              <DAI name="t" valKind="Spec" />
+            </DOI>
+            <DOI name="Mod">
+              <SDI name="ctlModel">
+                <DAI name="ctlModels" valKind="Spec">
+                  <Val>status_only</Val>
+                </DAI>
+              </SDI>
+              <DAI name="q" valKind="Spec" />
+              <DAI name="stVal" valKind="Spec">
+                <Val>on</Val>
+              </DAI>
+              <DAI name="t" valKind="Spec" />
+            </DOI>
+            <DOI name="Beh">
+              <DAI name="q" valKind="Spec" />
+              <DAI name="stVal" valKind="Spec">
+                <Val>on</Val>
+              </DAI>
+              <DAI name="t" valKind="Spec" />
+            </DOI>
+            <DOI name="Health">
+              <DAI name="q" valKind="Spec" />
+              <DAI name="stVal" valKind="Spec">
+                <Val>on</Val>
+              </DAI>
+              <DAI name="t" valKind="Spec" />
+            </DOI>
+            <DOI name="NamPlt">
+              <DAI name="d" valKind="Spec" />
+              <DAI name="swRev" valKind="Spec" />
+              <DAI name="vendor" valKind="Spec" />
+            </DOI>
+          </LN>
+        </LDevice>
+      </Server>
+    </AccessPoint>
+  </IED>
+  <DataTypeTemplates>
+    <LNodeType id="LLN0_0" iedType="" lnClass="LLN0">
+      <DO name="Mod" type="INC_1" transient="false" />
+      <DO name="Beh" type="INS_2" transient="false" />
+      <DO name="Health" type="INS_3" transient="false" />
+      <DO name="NamPlt" type="LPL_0" transient="false" />
+    </LNodeType>
+    <LNodeType id="ZRCT_TYPE_3" iedType="" lnClass="ZRCT">
+      <DO name="Mod" type="INC_1" transient="false" />
+      <DO name="Beh" type="INS_2" transient="false" />
+      <DO name="Health" type="INS_3" transient="false" />
+      <DO name="NamPlt" type="LPL_1" transient="false" />
+      <DO name="InV" type="DEL_0" transient="false" />
+      <DO name="InA" type="WYE_0" transient="false" />
+      <DO name="OutV" type="MV_0" transient="false" />
+      <DO name="OutA" type="MV_0" transient="false" />
+      <DO name="Fm" type="MV_0" transient="false" />
+      <DO name="BatA" type="MV_0" transient="false" />
+      <DO name="OutP" type="MV_0" transient="false" />
+      <DO name="Kpls" type="MV_0" transient="false" />
+      <DO name="BatTmp" type="MV_1" transient="false" />
+    </LNodeType>
+    <LNodeType id="LPHD_TYPE" iedType="" lnClass="LPHD">
+      <DO name="PhyNam" type="DPL_0" transient="false" />
+      <DO name="PhyHealth" type="INS_5" transient="false" />
+      <DO name="Proxy" type="SPS_1" transient="false" />
+    </LNodeType>
+    <LNodeType id="XCBR291" iedType="RTUType" lnClass="XCBR">
+      <DO name="Pos" type="XCBR291Pos" transient="false" />
+      <DO name="OpCnt" type="XCBR291OpCnt" transient="false" />
+      <DO name="CBOpCap" type="XCBR291CBOpCap" transient="false" />
+      <DO name="BlkOpn" type="XCBR291BlkOpn" transient="false" />
+      <DO name="BlkCls" type="XCBR291BlkCls" transient="false" />
+      <DO name="Loc" type="XCBR291Loc" transient="false" />
+      <DO name="Mod" type="Mod" transient="false" />
+      <DO name="Beh" type="Beh" transient="false" />
+      <DO name="Health" type="Health" transient="false" />
+      <DO name="NamPlt" type="NamPlt" transient="false" />
+    </LNodeType>
+    <DOType id="SPS_1" iedType="" cdc="SPS">
+      <DA name="stVal" bType="INT8" valKind="Spec" count="0" dchg="true" qchg="false" dupd="false" fc="ST" />
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="true" dupd="false" fc="ST" />
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="INC_1" iedType="" cdc="INC">
+      <DA name="stVal" bType="Enum" valKind="Spec" type="Mod" count="0" dchg="true" qchg="false" dupd="false" fc="ST" />
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="true" dupd="false" fc="ST" />
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+      <DA name="ctlModel" bType="Enum" valKind="Spec" type="ctlModel" count="0" dchg="false" qchg="false" dupd="false" fc="CF" />
+    </DOType>
+    <DOType id="INS_2" iedType="" cdc="INS">
+      <DA name="stVal" bType="Enum" valKind="Spec" type="Mod" count="0" dchg="true" qchg="false" dupd="false" fc="ST" />
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="true" dupd="false" fc="ST" />
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="INS_3" iedType="" cdc="INS">
+      <DA name="stVal" bType="Enum" valKind="Spec" type="Health" count="0" dchg="true" qchg="false" dupd="false" fc="ST" />
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="true" dupd="false" fc="ST" />
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="LPL_0" iedType="" cdc="LPL">
+      <DA name="vendor" bType="VisString255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+      <DA name="swRev" bType="VisString255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+      <DA name="d" bType="VisString255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+    </DOType>
+    <DOType id="DEL_0" iedType="" cdc="DEL">
+      <SDO name="phsAB" type="CMV_0" />
+      <SDO name="phsBC" type="CMV_0" />
+      <SDO name="phsCA" type="CMV_0" />
+    </DOType>
+    <DOType id="WYE_0" iedType="" cdc="WYE">
+      <SDO name="phsA" type="CMV_0" />
+      <SDO name="phsB" type="CMV_0" />
+      <SDO name="phsC" type="CMV_0" />
+    </DOType>
+    <DOType id="DPL_0" iedType="" cdc="DPL">
+      <DA name="vendor" bType="VisString255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+    </DOType>
+    <DOType id="INS_5" iedType="" cdc="INS">
+      <DA name="stVal" bType="INT8" valKind="Spec" count="0" dchg="true" qchg="false" dupd="false" fc="ST" />
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="true" dupd="false" fc="ST" />
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="CMV_0" iedType="" cdc="CMV">
+      <DA name="cVal" bType="Struct" valKind="Spec" type="Vector_0" count="0" dchg="true" qchg="false" dupd="false" fc="MX" />
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="true" dupd="false" fc="MX" />
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="MX" />
+      <DA name="units" bType="Struct" valKind="Spec" type="Unit_0" count="0" dchg="false" qchg="false" dupd="false" fc="CF" />
+      <DA name="dU" bType="Unicode255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+    </DOType>
+    <DOType id="MV_0" iedType="" cdc="MV">
+      <DA name="mag" bType="Struct" valKind="Spec" type="AnalogueValue_0" count="0" dchg="true" qchg="false" dupd="false" fc="MX" />
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="true" dupd="false" fc="MX" />
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="MX" />
+      <DA name="units" bType="Struct" valKind="Spec" type="Unit_0" count="0" dchg="false" qchg="false" dupd="false" fc="CF" />
+      <DA name="dU" bType="Unicode255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+    </DOType>
+    <DOType id="MV_1" iedType="" cdc="MV">
+      <DA name="mag" bType="Struct" valKind="Spec" type="AnalogueValue_1" count="0" dchg="true" qchg="false" dupd="false" fc="MX" />
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="true" dupd="false" fc="MX" />
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="MX" />
+      <DA name="units" bType="Struct" valKind="Spec" type="Unit_0" count="0" dchg="false" qchg="false" dupd="false" fc="CF" />
+      <DA name="dU" bType="Unicode255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+    </DOType>
+    <DOType id="LPL_1" iedType="" cdc="LPL">
+      <DA name="vendor" bType="VisString255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+      <DA name="swRev" bType="VisString255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+    </DOType>
+    <DOType id="SPS_2" iedType="" cdc="SPS">
+      <DA name="stVal" bType="INT8" valKind="Spec" count="0" dchg="true" qchg="true" dupd="true" fc="ST" />
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="true" dupd="false" fc="ST" />
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="XCBR291Pos" iedType="RTUType" cdc="DPC">
+      <DA name="ctlModel" bType="Struct" valKind="Spec" type="XCBR291PosctlModel" count="0" dchg="false" qchg="false" dupd="false" fc="CF" />
+      <DA name="ctlVal" bType="BOOLEAN" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="CO" />
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+      <DA name="stVal" bType="Enum" valKind="Spec" type=" stValEnum" count="0" dchg="false" qchg="false" dupd="false" fc="ST">
+        <Val>on</Val>
+      </DA>
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="XCBR291OpCnt" iedType="RTUType" cdc="INS">
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+      <DA name="stVal" bType="Enum" valKind="Spec" type=" stValEnum" count="0" dchg="false" qchg="false" dupd="false" fc="ST">
+        <Val>on</Val>
+      </DA>
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="XCBR291CBOpCap" iedType="RTUType" cdc="INS">
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+      <DA name="stVal" bType="Enum" valKind="Spec" type=" stValEnum" count="0" dchg="false" qchg="false" dupd="false" fc="ST">
+        <Val>on</Val>
+      </DA>
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="XCBR291BlkOpn" iedType="RTUType" cdc="SPC">
+      <DA name="ctlModel" bType="Struct" valKind="Spec" type="XCBR291BlkOpnctlModel" count="0" dchg="false" qchg="false" dupd="false" fc="CF" />
+    </DOType>
+    <DOType id="XCBR291BlkCls" iedType="RTUType" cdc="SPC">
+      <DA name="ctlModel" bType="Struct" valKind="Spec" type="XCBR291BlkClsctlModel" count="0" dchg="false" qchg="false" dupd="false" fc="CF" />
+    </DOType>
+    <DOType id="XCBR291Loc" iedType="RTUType" cdc="SPS">
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+      <DA name="stVal" bType="BOOLEAN" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="Mod" iedType="" cdc="INC">
+      <DA name="ctlModel" bType="Struct" valKind="Spec" type="ModctlModel" count="0" dchg="false" qchg="false" dupd="false" fc="CF" />
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+      <DA name="stVal" bType="Enum" valKind="Spec" type=" stValEnum" count="0" dchg="false" qchg="false" dupd="false" fc="ST">
+        <Val>on</Val>
+      </DA>
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="Beh" iedType="" cdc="INS">
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+      <DA name="stVal" bType="Enum" valKind="Spec" type=" stValEnum" count="0" dchg="false" qchg="false" dupd="false" fc="ST">
+        <Val>on</Val>
+      </DA>
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="Health" iedType="" cdc="INS">
+      <DA name="q" bType="Quality" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+      <DA name="stVal" bType="Enum" valKind="Spec" type=" stValEnum" count="0" dchg="false" qchg="false" dupd="false" fc="ST">
+        <Val>on</Val>
+      </DA>
+      <DA name="t" bType="Timestamp" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="ST" />
+    </DOType>
+    <DOType id="NamPlt" iedType="" cdc="LPL">
+      <DA name="d" bType="VisString255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+      <DA name="swRev" bType="VisString255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+      <DA name="vendor" bType="VisString255" valKind="Spec" count="0" dchg="false" qchg="false" dupd="false" fc="DC" />
+    </DOType>
+    <DAType id="Vector_0" iedType="">
+      <BDA name="mag" bType="Struct" valKind="Spec" type="AnalogueValue_0" count="0" />
+    </DAType>
+    <DAType id="AnalogueValue_0" iedType="">
+      <BDA name="f" bType="FLOAT32" valKind="Spec" count="0" />
+    </DAType>
+    <DAType id="AnalogueValue_1" iedType="">
+      <BDA name="i" bType="INT32" valKind="Spec" count="0" />
+    </DAType>
+    <DAType id="Unit_0" iedType="">
+      <BDA name="SIUnit" bType="Enum" valKind="Spec" type="SIUnit" count="0" />
+      <BDA name="multiplier" bType="Enum" valKind="Spec" type="multiplier" count="0" />
+    </DAType>
+    <DAType id="XCBR291PosctlModel" iedType="RTUType">
+      <BDA name="ctlModels" bType="Enum" valKind="Spec" type="ctlModelsEnum" count="0">
+        <Val>status_only</Val>
+      </BDA>
+    </DAType>
+    <DAType id="XCBR291BlkOpnctlModel" iedType="RTUType">
+      <BDA name="ctlModels" bType="Enum" valKind="Spec" type="ctlModelsEnum" count="0">
+        <Val>status_only</Val>
+      </BDA>
+    </DAType>
+    <DAType id="XCBR291BlkClsctlModel" iedType="RTUType">
+      <BDA name="ctlModels" bType="Enum" valKind="Spec" type="ctlModelsEnum" count="0">
+        <Val>status_only</Val>
+      </BDA>
+    </DAType>
+    <DAType id="ModctlModel" iedType="">
+      <BDA name="ctlModels" bType="Enum" valKind="Spec" type="ctlModelsEnum" count="0">
+        <Val>status_only</Val>
+      </BDA>
+    </DAType>
+    <EnumType id="ctlModel">
+      <EnumVal ord="0">status-only</EnumVal>
+      <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+      <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+    </EnumType>
+    <EnumType id="Mod">
+      <EnumVal ord="1">on</EnumVal>
+      <EnumVal ord="2">blocked</EnumVal>
+      <EnumVal ord="3">test</EnumVal>
+      <EnumVal ord="4">test/blocked</EnumVal>
+      <EnumVal ord="5">off</EnumVal>
+    </EnumType>
+    <EnumType id="Health">
+      <EnumVal ord="1">Ok</EnumVal>
+      <EnumVal ord="2">Warning</EnumVal>
+      <EnumVal ord="3">Alarm</EnumVal>
+    </EnumType>
+    <EnumType id="SIUnit">
+      <EnumVal ord="0">No Unit</EnumVal>
+      <EnumVal ord="1">No Units</EnumVal>
+      <EnumVal ord="2">m</EnumVal>
+      <EnumVal ord="3">kg</EnumVal>
+      <EnumVal ord="4">s</EnumVal>
+      <EnumVal ord="5">A</EnumVal>
+      <EnumVal ord="6">K</EnumVal>
+      <EnumVal ord="7">mol</EnumVal>
+      <EnumVal ord="8">cd</EnumVal>
+      <EnumVal ord="9">deg</EnumVal>
+      <EnumVal ord="10">rad</EnumVal>
+      <EnumVal ord="11">sr</EnumVal>
+      <EnumVal ord="21">Gy</EnumVal>
+      <EnumVal ord="22">q</EnumVal>
+      <EnumVal ord="23">°C</EnumVal>
+      <EnumVal ord="24">Sv</EnumVal>
+      <EnumVal ord="25">F</EnumVal>
+      <EnumVal ord="26">C</EnumVal>
+      <EnumVal ord="27">S</EnumVal>
+      <EnumVal ord="28">H</EnumVal>
+      <EnumVal ord="29">V</EnumVal>
+      <EnumVal ord="30">ohm</EnumVal>
+      <EnumVal ord="31">J</EnumVal>
+      <EnumVal ord="32">N</EnumVal>
+      <EnumVal ord="33">Hz</EnumVal>
+      <EnumVal ord="34">lx</EnumVal>
+      <EnumVal ord="35">Lm</EnumVal>
+      <EnumVal ord="36">Wb</EnumVal>
+      <EnumVal ord="37">T</EnumVal>
+      <EnumVal ord="38">W</EnumVal>
+      <EnumVal ord="39">Pa</EnumVal>
+      <EnumVal ord="41">m²</EnumVal>
+      <EnumVal ord="42">m³</EnumVal>
+      <EnumVal ord="43">m/s</EnumVal>
+      <EnumVal ord="44">m/s²</EnumVal>
+      <EnumVal ord="45">m³/s</EnumVal>
+      <EnumVal ord="46">m/m³</EnumVal>
+      <EnumVal ord="47">M</EnumVal>
+      <EnumVal ord="48">kg/m³</EnumVal>
+      <EnumVal ord="49">m²/s</EnumVal>
+      <EnumVal ord="50">W/m K</EnumVal>
+      <EnumVal ord="51">J/K</EnumVal>
+      <EnumVal ord="52">ppm</EnumVal>
+      <EnumVal ord="53">1/s</EnumVal>
+      <EnumVal ord="54">rad/s</EnumVal>
+      <EnumVal ord="61">VA</EnumVal>
+      <EnumVal ord="62">W</EnumVal>
+      <EnumVal ord="63">VAr</EnumVal>
+      <EnumVal ord="64">theta</EnumVal>
+      <EnumVal ord="65">cos(theta)</EnumVal>
+      <EnumVal ord="66">Vs</EnumVal>
+      <EnumVal ord="67">V²</EnumVal>
+      <EnumVal ord="68">As</EnumVal>
+      <EnumVal ord="69">A²</EnumVal>
+      <EnumVal ord="70">A²t</EnumVal>
+      <EnumVal ord="71">VAh</EnumVal>
+      <EnumVal ord="72">Wh</EnumVal>
+      <EnumVal ord="73">VArh</EnumVal>
+      <EnumVal ord="74">V/Hz</EnumVal>
+      <EnumVal ord="75">Hz/s</EnumVal>
+      <EnumVal ord="76">%</EnumVal>
+    </EnumType>
+    <EnumType id="multiplier">
+      <EnumVal ord="-24">y</EnumVal>
+      <EnumVal ord="-21">z</EnumVal>
+      <EnumVal ord="-18">a</EnumVal>
+      <EnumVal ord="-15">f</EnumVal>
+      <EnumVal ord="-12">p</EnumVal>
+      <EnumVal ord="-9">n</EnumVal>
+      <EnumVal ord="-6">μ</EnumVal>
+      <EnumVal ord="-3">m</EnumVal>
+      <EnumVal ord="-2">c</EnumVal>
+      <EnumVal ord="-1">d</EnumVal>
+      <EnumVal ord="0">No Multiplier</EnumVal>
+      <EnumVal ord="1">da</EnumVal>
+      <EnumVal ord="2">h</EnumVal>
+      <EnumVal ord="3">k</EnumVal>
+      <EnumVal ord="6">M</EnumVal>
+      <EnumVal ord="9">G</EnumVal>
+      <EnumVal ord="12">T</EnumVal>
+      <EnumVal ord="15">P</EnumVal>
+      <EnumVal ord="18">E</EnumVal>
+      <EnumVal ord="21">Z</EnumVal>
+      <EnumVal ord="24">Y</EnumVal>
+    </EnumType>
+    <EnumType id="ctlModelsEnum">
+      <EnumVal ord="0">status_only</EnumVal>
+      <EnumVal ord="1">direct_with_normal_security</EnumVal>
+      <EnumVal ord="2">sbo_with_normal_security</EnumVal>
+      <EnumVal ord="3">sbo_with_enhanced_security</EnumVal>
+      <EnumVal ord="4">direct_with_enhanced_security</EnumVal>
+    </EnumType>
+    <EnumType id=" stValEnum">
+      <EnumVal ord="0">on</EnumVal>
+      <EnumVal ord="1">blocked</EnumVal>
+      <EnumVal ord="2">test</EnumVal>
+      <EnumVal ord="3">test_blocked</EnumVal>
+      <EnumVal ord="4">off</EnumVal>
+    </EnumType>
+  </DataTypeTemplates>
+</SCL>

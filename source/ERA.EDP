@@ -1,0 +1,1316 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<EDPProject>
+   <ProjectSettings>
+      <name>Project</name>
+      <description/>
+      <authors>admin / Administrator</authors>
+      <createVersion>1.26.000-684</createVersion>
+      <saveVersion>1.26.000-684</saveVersion>
+      <SCMVersion>2105</SCMVersion>
+      <VersionRecords>
+         <Record>
+            <version>1</version>
+            <reason/>
+            <date>2021/01/11</date>
+         </Record>
+         <Record>
+            <version>3
+2</version>
+            <reason/>
+            <date>2021/01/12</date>
+         </Record>
+         <Record>
+            <version/>
+            <reason/>
+            <date>2021/01/13</date>
+         </Record>
+      </VersionRecords>
+      <DisabledModuleIDs/>
+   </ProjectSettings>
+   <DBHash>7bbbf2b669b4a147d532bb07b8f2ad42</DBHash>
+   <TreeGroupStyleSheets defaultStyleSheet="Default Style">
+      <StyleSheet name="Default Style">
+         <styleElement defaultValue="" itemType="TITLE_EDITABLE" label="Title"/>
+         <styleElement defaultValue="" itemType="SINGLE_LINE_INPUT" label="Location 1"/>
+         <styleElement defaultValue="" itemType="SINGLE_LINE_INPUT" label="Location 2"/>
+         <styleElement defaultValue="" itemType="SINGLE_LINE_INPUT" label="Location 3"/>
+         <styleElement defaultValue="" itemType="SINGLE_LINE_INPUT" label="Description"/>
+         <styleElement defaultValue="" itemType="MULTI_LINE_INPUT" label="More information"/>
+      </StyleSheet>
+   </TreeGroupStyleSheets>
+   <ADHGroups>
+      <ADHGroup name="ADH Group"/>
+      <defaultADHGroup name="ADH Group"/>
+   </ADHGroups>
+   <ProjectTree>
+      <TreeNode customName="Project" expanded="true" type="TREENODE_ROOT">
+         <TreeNode customName="(1)" expanded="true" type="TREENODE_DEVICE">
+            <moduleID>PG5901</moduleID>
+            <version>260</version>
+            <ADHGroup>ADH Group</ADHGroup>
+            <ModuleSettings>
+               <DeviceInfo>
+                  <CFEStartupTime>45000</CFEStartupTime>
+                  <CFEType>0</CFEType>
+                  <LED>0</LED>
+                  <commandArbitrationTimeout>10000</commandArbitrationTimeout>
+                  <commandPort>11000</commandPort>
+                  <commandTimeout>10000</commandTimeout>
+                  <consumerPort>10000</consumerPort>
+                  <description>PG5901</description>
+                  <deviceID>1</deviceID>
+                  <maxDatabaseMessages>128</maxDatabaseMessages>
+                  <name>PG5901</name>
+                  <statusPort>1000</statusPort>
+                  <timeSyncArbitrationTimeout>10000</timeSyncArbitrationTimeout>
+                  <timeSyncUTC>true</timeSyncUTC>
+                  <timeSyncSources>
+                     <Source>
+                        <moduleID>IEC 101/104</moduleID>
+                        <treeText>IEC 60870-5-104  (S): (1)</treeText>
+                        <appID>5</appID>
+                     </Source>
+                  </timeSyncSources>
+                  <adhEthernetChannel gateway="192.168.1.1" ipAddress="10.0.50.100" name="ETH1" subnetMask="255.255.255.0" useDHCP="false"/>
+                  <externalEthernetChannel gateway="192.168.1.1" ipAddress="192.168.1.3" name="ETH2" subnetMask="255.255.255.0" useDHCP="false"/>
+                  <ftpEthernetDetails gateway="192.168.1.1" ipAddress="10.0.50.100" name="ETH1" subnetMask="255.255.255.0" useDHCP="false"/>
+                  <ftpLoginInformation>
+                     <username>admin</username>
+                     <password>default</password>
+                     <port>21</port>
+                     <baseDirectory>/</baseDirectory>
+                     <displayBaseDirectory>true</displayBaseDirectory>
+                  </ftpLoginInformation>
+               </DeviceInfo>
+               <Diagnostics>
+                  <DiagnosticsApp>
+                     <Diagnostics>
+                        <diagnosticPort>3100</diagnosticPort>
+                        <communicationLinkType>ETHERNET_OR_USB</communicationLinkType>
+                     </Diagnostics>
+                  </DiagnosticsApp>
+                  <DiagnosticsInfo>
+                     <name>Diagnostic Application</name>
+                     <description>Diagnostic Application</description>
+                     <consumerPort>3102</consumerPort>
+                     <commandPort>3101</commandPort>
+                     <applicationClass>3</applicationClass>
+                     <applicationID>4</applicationID>
+                     <LED>0</LED>
+                     <clockSyncPriority>0</clockSyncPriority>
+                  </DiagnosticsInfo>
+               </Diagnostics>
+            </ModuleSettings>
+            <configuration>
+               <Save>
+                  <Children>
+                     <TreeNode customName="" expanded="true" type="TREENODE_COMMUNICATION_PORT">
+                        <portID>enode.common.comport.ENodeEthernet</portID>
+                        <PortSave gateway="192.168.1.1" ipAddress="10.0.50.100" name="ETH1" subnetMask="255.255.255.0" useDHCP="false"/>
+                        <Children>
+                           <TreeNode customName="(1)" expanded="false" type="TREENODE_ADH_APPLICATION">
+                              <moduleID>IEC 101/104</moduleID>
+                              <version>260</version>
+                              <ModuleSettings>
+                                 <ApplicationInfo>
+                                    <name>IEC 60870-5-104  (S): (1)</name>
+                                    <description>IEC 60870-5-104  (S): (1)</description>
+                                    <consumerPort>20100</consumerPort>
+                                    <ctrlPort>30100</ctrlPort>
+                                    <commandPort>19008</commandPort>
+                                    <applicationClass>3</applicationClass>
+                                    <applicationID>5</applicationID>
+                                    <LED>0</LED>
+                                    <clockSyncPriority>0</clockSyncPriority>
+                                 </ApplicationInfo>
+                              </ModuleSettings>
+                              <configuration>
+                                 <Save>
+                                    <MainModel CSType="SERVER" protocolType="IEC104">
+                                       <settingsCustom commandTimeout="3000" eventBufferSize="20000" limitationConnections="2" maxAPDUSize="253" serverCommonAddress="1" serverIPPort="2404"/>
+                                       <settingsInteroperability clockSyncPeriod="30000" commandResponseActtermUsed="true" longPulseTime="10000" maxEthernetReconnects="2" shortPulseTime="5000" t0="30" t1="15" t2="10" t3="20" valueK="12" valueW="8"/>
+                                       <IedInformationList>
+                                          <IedInfo IPAddress="" IPPort="2404" commonAddress="1" customName="" linkAddress="1" originatorAddress="1">
+                                             <logicalInformation logicalAddress="1">
+                                                <Data>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="Emerge1" informationObjectAddress="1" operateMode="" range="1" tag="Emerge1" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,188"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="Emerge1" informationObjectAddress="2" operateMode="" range="1" tag="Emerge2" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,189"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="Emerge1" informationObjectAddress="3" operateMode="" range="1" tag="State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,190"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="Emerge1" informationObjectAddress="4" operateMode="" range="1" tag="Battery" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,191"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="Emerge1" informationObjectAddress="5" operateMode="" range="1" tag="QF_State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,192"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_UDC_NOM" informationObjectAddress="6" operateMode="" range="1" tag="I bat" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,100"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="7" operateMode="" range="1" tag="U bat" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,101"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="8" operateMode="" range="1" tag="U d" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,102"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="9" operateMode="" range="1" tag="ULA" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,103"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="10" operateMode="" range="1" tag="ULB" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,104"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="11" operateMode="" range="1" tag="ULC" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,105"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="12" operateMode="" range="1" tag="TempBat" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,106"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="13" operateMode="" range="1" tag="RelHumBat" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,107"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="14" operateMode="" range="1" tag="I load" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,108"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="15" operateMode="" range="1" tag="I d" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,109"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="16" operateMode="" range="1" tag="U load" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,110"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="17" operateMode="" range="1" tag="RefU BPS" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,111"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="18" operateMode="" range="1" tag="RefI BPS" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,112"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="19" operateMode="" range="1" tag="RefU dop" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,113"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="20" operateMode="" range="1" tag="RefI bat" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,114"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="21" operateMode="" range="1" tag="iN APV" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,115"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="22" operateMode="" range="1" tag="iT APV" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,116"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="_IDC_NOM" informationObjectAddress="23" operateMode="" range="1" tag="UdopBatWire" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,117"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS_Emerge" informationObjectAddress="24" operateMode="" range="1" tag="BPS1_Emerge" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,168"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS_State" informationObjectAddress="25" operateMode="" range="1" tag="BPS1_State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,178"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS1_Uout" informationObjectAddress="26" operateMode="" range="1" tag="BPS1_Uout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,119"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS1_Uout" informationObjectAddress="27" operateMode="" range="1" tag="BPS1_Iout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,120"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS1_Uout" informationObjectAddress="28" operateMode="" range="1" tag="BPS1_Tmod" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,121"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS1_Uout" informationObjectAddress="29" operateMode="" range="1" tag="BPS1_Uin" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,122"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS1_UrefDop" informationObjectAddress="30" operateMode="" range="1" tag="BPS1_UrefDop" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,131"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS_Emerge" informationObjectAddress="31" operateMode="" range="1" tag="BPS2_Emerge" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,169"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS2_State" informationObjectAddress="32" operateMode="" range="1" tag="BPS2_State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,179"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS2_Uout" informationObjectAddress="33" operateMode="" range="1" tag="BPS2_Uout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,118"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS2_Uout" informationObjectAddress="34" operateMode="" range="1" tag="BPS2_Iout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,123"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS2_Uout" informationObjectAddress="35" operateMode="" range="1" tag="BPS2_Tmod" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,124"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS2_Uout" informationObjectAddress="36" operateMode="" range="1" tag="BPS2_Uin" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,125"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS2_UrefDop" informationObjectAddress="37" operateMode="" range="1" tag="BPS2_UrefDop" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,132"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS_Emerge" informationObjectAddress="38" operateMode="" range="1" tag="BPS3_Emerge" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,170"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS3_State" informationObjectAddress="39" operateMode="" range="1" tag="BPS3_State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,180"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS3_Uout" informationObjectAddress="40" operateMode="" range="1" tag="BPS3_Uout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,126"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS3_Uout" informationObjectAddress="41" operateMode="" range="1" tag="BPS3_Iout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,127"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS3_Uout" informationObjectAddress="42" operateMode="" range="1" tag="BPS3_Tmod" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,128"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS3_Uout" informationObjectAddress="43" operateMode="" range="1" tag="BPS3_Uin" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,129"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS3_Uout" informationObjectAddress="44" operateMode="" range="1" tag="BPS3_UrefDop" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,130"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS_Emerge" informationObjectAddress="45" operateMode="" range="1" tag="BPS4_Emerge" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,171"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS3_State" informationObjectAddress="46" operateMode="" range="1" tag="BPS4_State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,181"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS4_Uout" informationObjectAddress="47" operateMode="" range="1" tag="BPS4_Uout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,133"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS4_Uout" informationObjectAddress="48" operateMode="" range="1" tag="BPS4_Iout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,134"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS4_Uout" informationObjectAddress="49" operateMode="" range="1" tag="BPS4_Tmod" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,135"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS4_Uout" informationObjectAddress="50" operateMode="" range="1" tag="BPS4_Uin" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,136"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS4_Uout" informationObjectAddress="51" operateMode="" range="1" tag="BPS4_UrefDop" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,137"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS_Emerge" informationObjectAddress="52" operateMode="" range="1" tag="BPS5_Emerge" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,172"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS3_State" informationObjectAddress="53" operateMode="" range="1" tag="BPS5_State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,182"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS5_Uout" informationObjectAddress="54" operateMode="" range="1" tag="BPS5_Uout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,153"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS5_Uout" informationObjectAddress="55" operateMode="" range="1" tag="BPS5_Iout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,154"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS5_Uout" informationObjectAddress="56" operateMode="" range="1" tag="BPS5_Tmod" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,155"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS5_Uout" informationObjectAddress="57" operateMode="" range="1" tag="BPS5_Uin" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,156"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS5_Uout" informationObjectAddress="58" operateMode="" range="1" tag="BPS5_UrefDop" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,157"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS_Emerge" informationObjectAddress="59" operateMode="" range="1" tag="BPS6_Emerge" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,173"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS3_State" informationObjectAddress="60" operateMode="" range="1" tag="BPS6_State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,183"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS5_Uout" informationObjectAddress="61" operateMode="" range="1" tag="BPS6_Uout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,138"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS5_Uout" informationObjectAddress="62" operateMode="" range="1" tag="BPS6_Iout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,139"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS5_Uout" informationObjectAddress="63" operateMode="" range="1" tag="BPS6_Tmod" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,140"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS5_Uout" informationObjectAddress="64" operateMode="" range="1" tag="BPS6_Uin" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,141"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS5_Uout" informationObjectAddress="65" operateMode="" range="1" tag="BPS6_UrefDop" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,142"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS_Emerge" informationObjectAddress="66" operateMode="" range="1" tag="BPS7_Emerge" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,174"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS3_State" informationObjectAddress="67" operateMode="" range="1" tag="BPS7_State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,184"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS6_Uout" informationObjectAddress="68" operateMode="" range="1" tag="BPS7_Uout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,143"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS6_Uout" informationObjectAddress="69" operateMode="" range="1" tag="BPS7_Iout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,144"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS6_Uout" informationObjectAddress="70" operateMode="" range="1" tag="BPS7_Tmod" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,145"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS6_Uout" informationObjectAddress="71" operateMode="" range="1" tag="BPS7_Uin" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,146"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS6_Uout" informationObjectAddress="72" operateMode="" range="1" tag="BPS7_UrefDop" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,147"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS7_Uout" informationObjectAddress="73" operateMode="" range="1" tag="BPS8_Uout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,148"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS_Emerge" informationObjectAddress="74" operateMode="" range="1" tag="BPS8_Emerge" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,175"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS3_State" informationObjectAddress="75" operateMode="" range="1" tag="BPS8_State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,185"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS7_Uout" informationObjectAddress="76" operateMode="" range="1" tag="BPS8_Iout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,149"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS7_Uout" informationObjectAddress="77" operateMode="" range="1" tag="BPS8_Tmod" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,150"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS7_Uout" informationObjectAddress="78" operateMode="" range="1" tag="BPS8_Uin" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,151"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS7_Uout" informationObjectAddress="79" operateMode="" range="1" tag="BPS8_UrefDop" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,152"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS_Emerge" informationObjectAddress="80" operateMode="" range="1" tag="BPS9_Emerge" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,176"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS3_State" informationObjectAddress="81" operateMode="" range="1" tag="BPS9_State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,186"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS9_Uout" informationObjectAddress="82" operateMode="" range="1" tag="BPS9_Uout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,158"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS9_Uout" informationObjectAddress="83" operateMode="" range="1" tag="BPS9_Iout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,159"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS9_Uout" informationObjectAddress="84" operateMode="" range="1" tag="BPS9_Tmod" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,160"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS9_Uout" informationObjectAddress="85" operateMode="" range="1" tag="BPS9_Uin" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,161"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS9_Uout" informationObjectAddress="86" operateMode="" range="1" tag="BPS9_UrefDop" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,162"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS_Emerge" informationObjectAddress="87" operateMode="" range="1" tag="BPS10_Emerge" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,177"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_NORMALIZED" description="BPS10_State" informationObjectAddress="88" operateMode="" range="1" tag="BPS10_State" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,187"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS10_Uout" informationObjectAddress="89" operateMode="" range="1" tag="BPS10_Uout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,163"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS10_Uout" informationObjectAddress="90" operateMode="" range="1" tag="BPS10_Iout" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,164"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS10_Uout" informationObjectAddress="91" operateMode="" range="1" tag="BPS10_Tmod" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,165"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS10_Uout" informationObjectAddress="92" operateMode="" range="1" tag="BPS10_Uin" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,166"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                   <RowInfo causeOfTransmission="GENERAL_INTERROGATION" commandSboTimeout="1000" cyclicTransmissionTime="1000" dataClass="" dataType="MEASURED_VALUE_FLOAT" description="BPS10_Uout" informationObjectAddress="93" operateMode="" range="1" tag="BPS10_UrefDop" timeStampType="CP56TIME2A">
+                                                      <associatedPoint type="REFERENCE">
+                                                         <ENodeDataPoint referID="1,8,167"/>
+                                                      </associatedPoint>
+                                                   </RowInfo>
+                                                </Data>
+                                                <Commands/>
+                                             </logicalInformation>
+                                          </IedInfo>
+                                       </IedInformationList>
+                                    </MainModel>
+                                 </Save>
+                              </configuration>
+                           </TreeNode>
+                           <TreeNode customName="(1)" expanded="false" type="TREENODE_ADH_APPLICATION">
+                              <moduleID>DNP3</moduleID>
+                              <version>260</version>
+                              <ModuleSettings>
+                                 <ApplicationInfo>
+                                    <name>DNP3</name>
+                                    <description>DNP3</description>
+                                    <consumerPort>20101</consumerPort>
+                                    <ctrlPort>30101</ctrlPort>
+                                    <commandPort>19011</commandPort>
+                                    <applicationClass>3</applicationClass>
+                                    <applicationID>6</applicationID>
+                                    <LED>0</LED>
+                                    <clockSyncPriority>0</clockSyncPriority>
+                                 </ApplicationInfo>
+                              </ModuleSettings>
+                              <configuration>
+                                 <DNP3Save isClient="true">
+                                    <Handler ClientUnsolicited="true" CommunicationsMedium="TCP" FrameFormat="TCP" masterAddress="2">
+                                       <Tab>
+                                          <ServerInformation applicationlayertimeout="10000" class0123pollinterval="10000" class123pollinterval="1000" ethernetIp="10.0.50.1" ethernetPort="20000" linklayertimeout="2000" slaveAddress="1"/>
+                                          <InputInformation>
+                                             <RowInfo Deadband="0" address="0" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="Emerge1" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="Emerge1">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="Emerge1" exchangeType="DATA" functiontype="3" name="Emerge1" range="2">
+                                                      <ID>1,8,188</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="2" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="Emerge1" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="Emerge2">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="Emerge1" exchangeType="DATA" functiontype="3" name="Emerge2" range="2">
+                                                      <ID>1,8,189</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="4" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="Emerge1" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="Emerge1" exchangeType="DATA" functiontype="3" name="State" range="2">
+                                                      <ID>1,8,190</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="6" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="Emerge1" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="Battery">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="Emerge1" exchangeType="DATA" functiontype="3" name="Battery" range="2">
+                                                      <ID>1,8,191</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="8" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="Emerge1" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="QF_State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="Emerge1" exchangeType="DATA" functiontype="3" name="QF_State" range="2">
+                                                      <ID>1,8,192</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="10" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_UDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="I bat">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_UDC_NOM" exchangeType="DATA" functiontype="3" name="I bat" range="2">
+                                                      <ID>1,8,100</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="12" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="U bat">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="U bat" range="2">
+                                                      <ID>1,8,101</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="14" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="U d">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="U d" range="2">
+                                                      <ID>1,8,102</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="16" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="ULA">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="ULA" range="2">
+                                                      <ID>1,8,103</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="18" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="ULB">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="ULB" range="2">
+                                                      <ID>1,8,104</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="20" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="ULC">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="ULC" range="2">
+                                                      <ID>1,8,105</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="22" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="TempBat">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="TempBat" range="2">
+                                                      <ID>1,8,106</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="24" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="RelHumBat">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="RelHumBat" range="2">
+                                                      <ID>1,8,107</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="26" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="I load">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="I load" range="2">
+                                                      <ID>1,8,108</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="28" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="I d">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="I d" range="2">
+                                                      <ID>1,8,109</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="30" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="U load">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="U load" range="2">
+                                                      <ID>1,8,110</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="32" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="RefU BPS">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="RefU BPS" range="2">
+                                                      <ID>1,8,111</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="34" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="RefI BPS">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="RefI BPS" range="2">
+                                                      <ID>1,8,112</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="36" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="RefU dop">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="RefU dop" range="2">
+                                                      <ID>1,8,113</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="38" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="RefI bat">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="RefI bat" range="2">
+                                                      <ID>1,8,114</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="40" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="iN APV">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="iN APV" range="2">
+                                                      <ID>1,8,115</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="42" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="iT APV">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="iT APV" range="2">
+                                                      <ID>1,8,116</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="44" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="_IDC_NOM" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="2" selectms="0" tagName="UdopBatWire">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="_IDC_NOM" exchangeType="DATA" functiontype="3" name="UdopBatWire" range="2">
+                                                      <ID>1,8,117</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="208" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS_Emerge" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS1_Emerge">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS_Emerge" exchangeType="DATA" functiontype="3" name="BPS1_Emerge" range="1">
+                                                      <ID>1,8,168</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="209" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS_State" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS1_State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS_State" exchangeType="DATA" functiontype="3" name="BPS1_State" range="1">
+                                                      <ID>1,8,178</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="210" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS1_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS1_Uout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS1_Uout" exchangeType="DATA" functiontype="3" name="BPS1_Uout" range="1">
+                                                      <ID>1,8,119</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="211" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS1_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS1_Iout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS1_Uout" exchangeType="DATA" functiontype="3" name="BPS1_Iout" range="1">
+                                                      <ID>1,8,120</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="212" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS1_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS1_Tmod">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS1_Uout" exchangeType="DATA" functiontype="3" name="BPS1_Tmod" range="1">
+                                                      <ID>1,8,121</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="213" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS1_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS1_Uin">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS1_Uout" exchangeType="DATA" functiontype="3" name="BPS1_Uin" range="1">
+                                                      <ID>1,8,122</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="214" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS1_UrefDop" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS1_UrefDop">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS1_UrefDop" exchangeType="DATA" functiontype="3" name="BPS1_UrefDop" range="1">
+                                                      <ID>1,8,131</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="215" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS_Emerge" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS2_Emerge">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS_Emerge" exchangeType="DATA" functiontype="3" name="BPS2_Emerge" range="1">
+                                                      <ID>1,8,169</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="216" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS2_State" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS2_State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS2_State" exchangeType="DATA" functiontype="3" name="BPS2_State" range="1">
+                                                      <ID>1,8,179</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="217" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS2_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS2_Uout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS2_Uout" exchangeType="DATA" functiontype="3" name="BPS2_Uout" range="1">
+                                                      <ID>1,8,118</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="218" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS2_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS2_Iout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS2_Uout" exchangeType="DATA" functiontype="3" name="BPS2_Iout" range="1">
+                                                      <ID>1,8,123</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="219" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS2_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS2_Tmod">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS2_Uout" exchangeType="DATA" functiontype="3" name="BPS2_Tmod" range="1">
+                                                      <ID>1,8,124</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="220" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS2_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS2_Uin">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS2_Uout" exchangeType="DATA" functiontype="3" name="BPS2_Uin" range="1">
+                                                      <ID>1,8,125</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="221" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS2_UrefDop" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS2_UrefDop">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS2_UrefDop" exchangeType="DATA" functiontype="3" name="BPS2_UrefDop" range="1">
+                                                      <ID>1,8,132</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="222" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS_Emerge" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS3_Emerge">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS_Emerge" exchangeType="DATA" functiontype="3" name="BPS3_Emerge" range="1">
+                                                      <ID>1,8,170</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="223" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_State" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS3_State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_State" exchangeType="DATA" functiontype="3" name="BPS3_State" range="1">
+                                                      <ID>1,8,180</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="224" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS3_Uout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_Uout" exchangeType="DATA" functiontype="3" name="BPS3_Uout" range="1">
+                                                      <ID>1,8,126</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="225" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS3_Iout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_Uout" exchangeType="DATA" functiontype="3" name="BPS3_Iout" range="1">
+                                                      <ID>1,8,127</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="226" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS3_Tmod">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_Uout" exchangeType="DATA" functiontype="3" name="BPS3_Tmod" range="1">
+                                                      <ID>1,8,128</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="227" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS3_Uin">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_Uout" exchangeType="DATA" functiontype="3" name="BPS3_Uin" range="1">
+                                                      <ID>1,8,129</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="228" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS3_UrefDop">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_Uout" exchangeType="DATA" functiontype="3" name="BPS3_UrefDop" range="1">
+                                                      <ID>1,8,130</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="229" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS_Emerge" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS4_Emerge">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS_Emerge" exchangeType="DATA" functiontype="3" name="BPS4_Emerge" range="1">
+                                                      <ID>1,8,171</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="230" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_State" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS4_State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_State" exchangeType="DATA" functiontype="3" name="BPS4_State" range="1">
+                                                      <ID>1,8,181</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="231" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS4_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS4_Uout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS4_Uout" exchangeType="DATA" functiontype="3" name="BPS4_Uout" range="1">
+                                                      <ID>1,8,133</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="232" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS4_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS4_Iout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS4_Uout" exchangeType="DATA" functiontype="3" name="BPS4_Iout" range="1">
+                                                      <ID>1,8,134</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="233" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS4_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS4_Tmod">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS4_Uout" exchangeType="DATA" functiontype="3" name="BPS4_Tmod" range="1">
+                                                      <ID>1,8,135</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="234" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS4_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS4_Uin">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS4_Uout" exchangeType="DATA" functiontype="3" name="BPS4_Uin" range="1">
+                                                      <ID>1,8,136</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="235" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS4_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS4_UrefDop">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS4_Uout" exchangeType="DATA" functiontype="3" name="BPS4_UrefDop" range="1">
+                                                      <ID>1,8,137</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="236" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS_Emerge" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS5_Emerge">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS_Emerge" exchangeType="DATA" functiontype="3" name="BPS5_Emerge" range="1">
+                                                      <ID>1,8,172</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="237" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_State" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS5_State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_State" exchangeType="DATA" functiontype="3" name="BPS5_State" range="1">
+                                                      <ID>1,8,182</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="238" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS5_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS5_Uout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS5_Uout" exchangeType="DATA" functiontype="3" name="BPS5_Uout" range="1">
+                                                      <ID>1,8,153</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="239" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS5_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS5_Iout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS5_Uout" exchangeType="DATA" functiontype="3" name="BPS5_Iout" range="1">
+                                                      <ID>1,8,154</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="240" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS5_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS5_Tmod">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS5_Uout" exchangeType="DATA" functiontype="3" name="BPS5_Tmod" range="1">
+                                                      <ID>1,8,155</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="241" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS5_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS5_Uin">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS5_Uout" exchangeType="DATA" functiontype="3" name="BPS5_Uin" range="1">
+                                                      <ID>1,8,156</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="242" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS5_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS5_UrefDop">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS5_Uout" exchangeType="DATA" functiontype="3" name="BPS5_UrefDop" range="1">
+                                                      <ID>1,8,157</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="243" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS_Emerge" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS6_Emerge">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS_Emerge" exchangeType="DATA" functiontype="3" name="BPS6_Emerge" range="1">
+                                                      <ID>1,8,173</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="244" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_State" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS6_State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_State" exchangeType="DATA" functiontype="3" name="BPS6_State" range="1">
+                                                      <ID>1,8,183</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="245" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS5_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS6_Uout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS5_Uout" exchangeType="DATA" functiontype="3" name="BPS6_Uout" range="1">
+                                                      <ID>1,8,138</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="246" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS5_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS6_Iout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS5_Uout" exchangeType="DATA" functiontype="3" name="BPS6_Iout" range="1">
+                                                      <ID>1,8,139</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="247" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS5_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS6_Tmod">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS5_Uout" exchangeType="DATA" functiontype="3" name="BPS6_Tmod" range="1">
+                                                      <ID>1,8,140</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="248" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS5_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS6_Uin">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS5_Uout" exchangeType="DATA" functiontype="3" name="BPS6_Uin" range="1">
+                                                      <ID>1,8,141</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="249" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS5_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS6_UrefDop">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS5_Uout" exchangeType="DATA" functiontype="3" name="BPS6_UrefDop" range="1">
+                                                      <ID>1,8,142</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="250" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS_Emerge" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS7_Emerge">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS_Emerge" exchangeType="DATA" functiontype="3" name="BPS7_Emerge" range="1">
+                                                      <ID>1,8,174</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="251" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_State" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS7_State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_State" exchangeType="DATA" functiontype="3" name="BPS7_State" range="1">
+                                                      <ID>1,8,184</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="252" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS6_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS7_Uout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS6_Uout" exchangeType="DATA" functiontype="3" name="BPS7_Uout" range="1">
+                                                      <ID>1,8,143</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="253" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS6_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS7_Iout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS6_Uout" exchangeType="DATA" functiontype="3" name="BPS7_Iout" range="1">
+                                                      <ID>1,8,144</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="254" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS6_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS7_Tmod">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS6_Uout" exchangeType="DATA" functiontype="3" name="BPS7_Tmod" range="1">
+                                                      <ID>1,8,145</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="255" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS6_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS7_Uin">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS6_Uout" exchangeType="DATA" functiontype="3" name="BPS7_Uin" range="1">
+                                                      <ID>1,8,146</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="256" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS6_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS7_UrefDop">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS6_Uout" exchangeType="DATA" functiontype="3" name="BPS7_UrefDop" range="1">
+                                                      <ID>1,8,147</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="259" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS7_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS8_Uout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS7_Uout" exchangeType="DATA" functiontype="3" name="BPS8_Uout" range="1">
+                                                      <ID>1,8,148</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="257" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS_Emerge" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS8_Emerge">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS_Emerge" exchangeType="DATA" functiontype="3" name="BPS8_Emerge" range="1">
+                                                      <ID>1,8,175</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="258" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_State" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS8_State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_State" exchangeType="DATA" functiontype="3" name="BPS8_State" range="1">
+                                                      <ID>1,8,185</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="260" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS7_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS8_Iout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS7_Uout" exchangeType="DATA" functiontype="3" name="BPS8_Iout" range="1">
+                                                      <ID>1,8,149</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="261" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS7_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS8_Tmod">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS7_Uout" exchangeType="DATA" functiontype="3" name="BPS8_Tmod" range="1">
+                                                      <ID>1,8,150</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="262" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS7_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS8_Uin">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS7_Uout" exchangeType="DATA" functiontype="3" name="BPS8_Uin" range="1">
+                                                      <ID>1,8,151</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="263" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS7_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS8_UrefDop">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS7_Uout" exchangeType="DATA" functiontype="3" name="BPS8_UrefDop" range="1">
+                                                      <ID>1,8,152</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="264" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS_Emerge" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS9_Emerge">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS_Emerge" exchangeType="DATA" functiontype="3" name="BPS9_Emerge" range="1">
+                                                      <ID>1,8,176</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="265" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS3_State" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS9_State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS3_State" exchangeType="DATA" functiontype="3" name="BPS9_State" range="1">
+                                                      <ID>1,8,186</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="266" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS9_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS9_Uout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS9_Uout" exchangeType="DATA" functiontype="3" name="BPS9_Uout" range="1">
+                                                      <ID>1,8,158</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="267" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS9_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS9_Iout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS9_Uout" exchangeType="DATA" functiontype="3" name="BPS9_Iout" range="1">
+                                                      <ID>1,8,159</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="268" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS9_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS9_Tmod">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS9_Uout" exchangeType="DATA" functiontype="3" name="BPS9_Tmod" range="1">
+                                                      <ID>1,8,160</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="269" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS9_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS9_Uin">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS9_Uout" exchangeType="DATA" functiontype="3" name="BPS9_Uin" range="1">
+                                                      <ID>1,8,161</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="270" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS9_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS9_UrefDop">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS9_Uout" exchangeType="DATA" functiontype="3" name="BPS9_UrefDop" range="1">
+                                                      <ID>1,8,162</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="271" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS_Emerge" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS10_Emerge">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS_Emerge" exchangeType="DATA" functiontype="3" name="BPS10_Emerge" range="1">
+                                                      <ID>1,8,177</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="272" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS10_State" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS10_State">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS10_State" exchangeType="DATA" functiontype="3" name="BPS10_State" range="1">
+                                                      <ID>1,8,187</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="273" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS10_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS10_Uout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS10_Uout" exchangeType="DATA" functiontype="3" name="BPS10_Uout" range="1">
+                                                      <ID>1,8,163</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="274" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS10_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS10_Iout">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS10_Uout" exchangeType="DATA" functiontype="3" name="BPS10_Iout" range="1">
+                                                      <ID>1,8,164</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="275" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS10_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS10_Tmod">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS10_Uout" exchangeType="DATA" functiontype="3" name="BPS10_Tmod" range="1">
+                                                      <ID>1,8,165</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="276" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS10_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS10_Uin">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS10_Uout" exchangeType="DATA" functiontype="3" name="BPS10_Uin" range="1">
+                                                      <ID>1,8,166</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                             <RowInfo Deadband="0" address="277" class="NO_CLASS_ASSIGNMENT" cmdtype="STATUS_ONLY" description="BPS10_Uout" dnp3datatype="SIGNED_DOUBLE_WORD" object="ANALOG_INPUT" range="1" selectms="0" tagName="BPS10_UrefDop">
+                                                <DataPoint type="REAL">
+                                                   <ENodeDataPoint dataType="SIGNED_32" description="BPS10_Uout" exchangeType="DATA" functiontype="3" name="BPS10_UrefDop" range="1">
+                                                      <ID>1,8,167</ID>
+                                                   </ENodeDataPoint>
+                                                </DataPoint>
+                                             </RowInfo>
+                                          </InputInformation>
+                                          <OutputInformation/>
+                                       </Tab>
+                                    </Handler>
+                                 </DNP3Save>
+                              </configuration>
+                           </TreeNode>
+                        </Children>
+                     </TreeNode>
+                     <TreeNode customName="" expanded="false" type="TREENODE_COMMUNICATION_PORT">
+                        <portID>enode.common.comport.ENodeEthernet</portID>
+                        <PortSave gateway="192.168.1.1" ipAddress="192.168.1.3" name="ETH2" subnetMask="255.255.255.0" useDHCP="false"/>
+                        <Children/>
+                     </TreeNode>
+                     <TreeNode customName="" expanded="false" type="TREENODE_COMMUNICATION_PORT">
+                        <portID>enode.common.comport.ENodeSerial</portID>
+                        <PortSave baudRate="9600" communicationType="RS232" dataBits="8" flowControl="NONE" name="COM1" parity="NONE" portBinaryValue="0" stopBits="1">
+                           <availableBaudRates>[1200, 2400, 4800, 9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600]</availableBaudRates>
+                           <availableDataBits>[7, 8]</availableDataBits>
+                           <availableStopBits>[1, 2]</availableStopBits>
+                           <availableParities>[NONE,ODD,EVEN]</availableParities>
+                           <availableFlowControl>[NONE,XON_XOFF,HARDWARE]</availableFlowControl>
+                           <availableCommunicationTypes>[RS232,RS422,RS485,RS485_4WIRE]</availableCommunicationTypes>
+                           <Advanced characterRetries="10" characterTimeout="5" interCharacterDelay="2" messageRetries="0" messageTimeout="0" postTransmissionDelay="5" preTransmissionDelay="10"/>
+                        </PortSave>
+                        <Children/>
+                     </TreeNode>
+                  </Children>
+               </Save>
+            </configuration>
+         </TreeNode>
+      </TreeNode>
+   </ProjectTree>
+</EDPProject>
